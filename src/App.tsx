@@ -2,6 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import { motion } from "framer-motion"
+
+
+const MyComponent = () => (
+  <motion.div
+    animate={{
+      scale: [1, 2, 2, 1, 1],
+      rotate: [0, 0, 270, 270, 0],
+      borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+    }}
+  />
+)
+
+
 
 function App() {
   return (
@@ -10,8 +24,25 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <h1 className="text-4xl font-bold underline">
-          Hello world!
+          Hello world!!!!
         </h1>
+        <MyComponent />
+        <div className="example-container">
+          <motion.div
+            animate={{
+              scale: [1, 2, 2, 1, 1],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ["20%", "20%", "50%", "50%", "20%"]
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              times: [0, 0.2, 0.5, 0.8, 1],
+              repeat: Infinity,
+              repeatDelay: 1
+            }}
+          />
+        </div>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
