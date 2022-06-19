@@ -1,0 +1,65 @@
+.container{
+    box-sizing: border-box;
+}
+
+.verticalWipe{
+    height: 100vh;
+    width: 100%;
+    background-color:black;
+    transition: 750ms;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.brand{
+    opacity: 0;
+    z-index: 2;
+}
+
+
+.brandProduct{
+    display: block;
+    position: relative;
+    font-size: 1.5em;
+    color: #ffff;
+    left: 2.85em;
+    top: 1em;
+    opacity: 0;
+}
+
+.brandProduct.active{
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+    top: -1em;
+}
+
+.brandProduct.fade{
+    top: -3em;
+    bottom: 1em;
+    left: 2.75em;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+  }
+
+.brandName{
+    opacity: 0;
+    display: block;
+    position: relative;
+    top: 0.5em;
+    font-size: 3.5em;
+    color: #e9712e;
+}
+
+.brandName.active{
+    top: 0em;
+    opacity: 1;
+    transition: ease-in-out 0.5s
+}
+
+.brandName.fade{
+    top: -0.5em;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
